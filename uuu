@@ -1,0 +1,19 @@
+
+
+IF DB_ID('MyHomeworkDB') IS NULL
+BEGIN
+    CREATE DATABASE MyHomeworkDB;
+    PRINT 'База данных MyHomeworkDB успешно создана.';
+END
+ELSE
+BEGIN
+    PRINT 'База данных MyHomeworkDB уже существует.';
+END
+GO
+
+-- Переключаемся на созданную базу данных (чтобы убедиться, что она работает)
+USE MyHomeworkDB;
+GO
+
+PRINT 'Текущая база данных: ' + DB_NAME();
+GO
